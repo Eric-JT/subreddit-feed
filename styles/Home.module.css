@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  width: 100vw;
+  background-color: rgba(245, 222, 179, 0.308);
 }
 
 .main {
@@ -74,11 +75,25 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  width: 100%;
   margin-top: 3rem;
+  padding-top: 3rem;
 }
 
 .card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: blueviolet;
+  background-color: rgba(137, 43, 226, 0.267);
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 400px;
+}
+
+.search {
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -87,14 +102,15 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+  width: 90%;
+  font-size: 2rem;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #f300cb;
+  border-color: #7100f3;
 }
 
 .card h2 {
@@ -108,14 +124,49 @@
   line-height: 1.5;
 }
 
+.link {
+  cursor: pointer;
+}
+
 .logo {
   height: 1em;
+  font-style: italic;
   margin-left: 0.5rem;
+  color: blueviolet;
+}
+
+a.btn {
+  display: inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #7a1ee2;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  background-color: cornflowerblue;
+  color:#ffffff;
+  text-align:center;
+  transition: all 0.2s;
+  }
+  a.btn:hover{
+  color:#7910becc;
+  background-color:#FFFFFF;
+  }
+@media all and (max-width:30em){
+  a.btn{
+    display:block;
+    margin:0.4em auto;
+  }
 }
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .title {
+    font-size: 3rem;
   }
 }
